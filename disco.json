@@ -1,0 +1,17 @@
+{
+    "version": "1.0",
+    "services": {
+        "relay": {
+            "publishedPorts": [{
+                "publishedAs": 4000,
+                "fromContainerPort": 4000,
+                "protocol": "tcp"
+            }],
+            "image": "evoluhq/relay:latest",
+            "volumes": [{
+                "name": "evolu-relay-data",
+                "destinationPath": "/app/apps/relay/data"
+            }]
+        }
+    }
+}
